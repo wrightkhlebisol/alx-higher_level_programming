@@ -2,4 +2,4 @@
 asc_range = list(range(97, 123))
 
 for n in asc_range:
-    print(chr(n), end="")
+    print("{}".format(chr(n)), end="")
