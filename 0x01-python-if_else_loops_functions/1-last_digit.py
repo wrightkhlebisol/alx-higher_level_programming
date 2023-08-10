@@ -2,7 +2,10 @@
 import random
 number = random.randint(-10000, 10000)
 
-new_num = int(str(number)[-1])
+if number < 0:
+    new_num = int(str(number)[-1]) * -1
+else:
+    new_num = int(str(number)[-1])
 
 if new_num > 5:
     print(f"Last digit of {number:d} \
