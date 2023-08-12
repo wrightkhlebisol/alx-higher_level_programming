@@ -10,7 +10,8 @@ if __name__ == "__main__":
         b = int(sys.argv[3])
         sign, sign_list = sys.argv[2], ["+", "-", "*", "/"]
         if sign not in sign_list:
-            sys.stderr.write("Unknown operator. Available operators: +, -, * and /\n")
+            sys.stderr.write("Unknown operator. Available \
+operators: +, -, * and /\n")
             sys.exit(1)
         else:
             if sign == '+':
