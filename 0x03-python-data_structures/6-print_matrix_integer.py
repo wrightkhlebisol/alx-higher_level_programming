@@ -2,4 +2,8 @@
 def print_matrix_integer(matrix=[[]]):
     if matrix is None:
         print(matrix)
-
+    elif len(matrix) <= 1:
+        print()
+    else:
+        for row in matrix:
+            print("{} {} {}".format(row[0], row[1], row[2]))
