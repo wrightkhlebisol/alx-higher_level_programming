@@ -3,7 +3,7 @@ def print_matrix_integer(matrix=[[]]):
     if matrix is None:
         print("{}".format(matrix))
     elif len(matrix) <= 1:
-        print("{}".format(""))
+        print()
     else:
         for row in matrix:
-            print("{} {} {}".format(row[0], row[1], row[2]))
+            print("{:d} {:d} {:d}".format(row[0], row[1], row[2]))
