@@ -2,8 +2,13 @@
 def print_matrix_integer(matrix=[[]]):
     if matrix is None:
         print("{}".format(matrix))
-    elif len(matrix) <= 1:
-        print()
     else:
         for row in matrix:
-            print("{:d} {:d} {:d}".format(row[0], row[1], row[2]))
+            if len(row) < 1:
+                print()
+            else:
+                for i in range(len(row)):
+                    if i == len(row) - 1:
+                        print("{:d}".format(row[i]))
+                    else:
+                        print("{:d}".format(row[i]), end=' ')
