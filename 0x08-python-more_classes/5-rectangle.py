@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""4-rectangle.py"""
+"""5-rectangle.py"""
 
 
 class Rectangle:
@@ -66,3 +66,6 @@ class Rectangle:
     def __repr__(self):
         """String representation of rectangle"""
         return f"Rectangle({self.__width}, {self.__height})"
+
+    def __del__(self):
+        print("Bye rectangle...")
