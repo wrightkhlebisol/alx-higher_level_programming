@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""7-rectangle.py"""
+"""9-rectangle.py"""
 
 
 class Rectangle:
@@ -61,6 +61,8 @@ class Rectangle:
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
+        """Class method for object compare, available in the
+        class scope so has access to all class instances"""
         if type(rect_1) is not Rectangle:
             raise TypeError("rect_1 must be an instance of Rectangle")
         if type(rect_2) is not Rectangle:
@@ -71,6 +73,10 @@ class Rectangle:
             return rect_2
         else:
             return rect_1
+
+    @staticmethod
+    def square(cls, size=0):
+        return Rectangle(cls, cls)
 
     def __str__(self):
         """Print string representation of rectangle"""
