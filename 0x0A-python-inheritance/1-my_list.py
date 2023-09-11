@@ -9,3 +9,4 @@ class MyList(list):
         """Prints sorted list"""
         new_list = list(self)
         list.sort(self)
+        print(new_list)
