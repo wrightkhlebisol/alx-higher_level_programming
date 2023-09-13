@@ -4,4 +4,4 @@
 
 def add_integer(a, b=98):
     """Add two integers with one named argument"""
-    return int(a) + int(b)
+    return int(a) + b
