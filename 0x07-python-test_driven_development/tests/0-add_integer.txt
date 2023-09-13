@@ -9,6 +9,10 @@
 98
 >>> add_integer(12, 98)
 110
+>>> add_integer(1, "98")
+99
+>>> add_integer(1.4, 2)
+3
 >>> add_integer('12', 98)
 110
 >>> add_integer(12, '98')
