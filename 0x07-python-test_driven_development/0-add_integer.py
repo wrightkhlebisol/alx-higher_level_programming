@@ -4,4 +4,7 @@
 
 def add_integer(a, b=98):
     """Add two integers with one named argument"""
-    return a + b
+    try:
+        return int(a) + int(b)
+    except SyntaxError as e:
+        print(e, "Syntax error")
