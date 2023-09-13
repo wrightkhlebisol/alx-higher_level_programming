@@ -14,7 +14,7 @@ def load_add_save():
 
     if not os.path.exists(filename):
         save_to_json_file(cmd_args, filename)
-    else: 
+    else:
         file_content = load_from_json_file(filename)
         if file_content is None:
             save_to_json_file(cmd_args, filename)
