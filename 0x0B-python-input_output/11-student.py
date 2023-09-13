@@ -22,5 +22,5 @@ class Student:
             return new_dict
 
     def reload_from_json(self, json):
-        first_name = json.get(first_name)
-        last_name = json.get(last_name)
+        self.first_name = json["first_name"]
+        self.last_name = json["last_name"]
