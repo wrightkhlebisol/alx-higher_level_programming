@@ -45,19 +45,31 @@ class Rectangle(Base):
             print(" " * self.x, end="")
             print("#" * self.width)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Update the attributes"""
-        for i, arg in enumerate(args):
-            if i == 0:
-                self.id = arg
-            elif i == 1:
-                self.width = arg
-            elif i == 2:
-                self.height = arg
-            elif i == 3:
-                self.x = arg
-            elif i == 4:
-                self.y = arg
+        if not args:
+            if kwargs.get('id') is not None:
+                self.id = kwargs.get('id')
+            if kwargs.get('width') is not None:
+                self.width = kwargs.get('width')
+            if kwargs.get('height') is not None:
+                self.height = kwargs.get('height')
+            if kwargs.get('x') is not None:
+                self.x = kwargs.get('x')
+            if kwargs.get('y') is not None:
+                self.y = kwargs.get('y')
+        else:
+            for i, arg in enumerate(args):
+                if i == 0:
+                    self.id = arg
+                elif i == 1:
+                    self.width = arg
+                elif i == 2:
+                    self.height = arg
+                elif i == 3:
+                    self.x = arg
+                elif i == 4:
+                    self.id = arg
 
     @property
     def width(self):
