@@ -38,8 +38,11 @@ class Rectangle(Base):
         return self.width * self.height
 
     def display(self):
-        """ Display the rectangle """
+        """ Display the rectangle at given position"""
+        for i in range(self.y):
+            print()
         for i in range(self.height):
+            print(" " * self.x, end="")
             print("#" * self.width)
 
     @property
