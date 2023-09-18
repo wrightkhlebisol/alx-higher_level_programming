@@ -27,7 +27,6 @@ class Rectangle(Base):
             raise ValueError(f"{str_arg} must be > 0")
 
     def valid_x_y(self, arg, str_arg):
-        
         if type(arg) is not int:
             raise TypeError(f"{str_arg} must be an integer")
         if arg < 0:
@@ -69,7 +68,7 @@ class Rectangle(Base):
                 elif i == 3:
                     self.x = arg
                 elif i == 4:
-                    self.id = arg
+                    self.y = arg
 
     @property
     def width(self):
@@ -108,4 +107,11 @@ class Rectangle(Base):
         self.__y = y
 
     def __str__(self):
-        return f"[{self.__class__.__name__}] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
+        class_name = self.__class__.__name__
+        s_id = self.id
+        s_x = self.x
+        s_y = self.y
+        s_w = self.width
+        s_h = self.height
+
+        return f"[{class_name}] ({s_id}) {s_x}/{s_y} - {s_w}/{s_h}"
