@@ -4,14 +4,14 @@ from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """Class square"""
+    """ Class square """
 
     def __init__(self, size, x=0, y=0, id=None):
-        """Class initializer"""
+        """ Class initializer """
         super().__init__(size, size, x, y, id)
 
     def update(self, *args, **kwargs):
-        """Update the attributes"""
+        """ Update the attributes """
         if not args:
             if kwargs.get('id') is not None:
                 self.id = kwargs.get('id')

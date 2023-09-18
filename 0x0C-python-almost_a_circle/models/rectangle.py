@@ -21,12 +21,14 @@ class Rectangle(Base):
         self.__y = y
 
     def valid_w_h(self, arg, str_arg):
+        """ Validate width and height """
         if type(arg) is not int:
             raise TypeError(f"{str_arg} must be an integer")
         if arg <= 0:
             raise ValueError(f"{str_arg} must be > 0")
 
     def valid_x_y(self, arg, str_arg):
+        """ Validate x and y """
         if type(arg) is not int:
             raise TypeError(f"{str_arg} must be an integer")
         if arg < 0:
@@ -69,6 +71,15 @@ class Rectangle(Base):
                     self.x = arg
                 elif i == 4:
                     self.y = arg
+
+    def to_dictionary(self):
+        return dict({
+            'x': self.x, 
+            'y': self.y,
+            'id': self.id,
+            'height': self.height,
+            'width': self.width
+        })
 
     @property
     def width(self):
