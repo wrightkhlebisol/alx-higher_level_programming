@@ -10,10 +10,37 @@ class Rectangle(Base):
         """Class initializer"""
         Base.__init__(self, id)
 
+        self.valid_w_h(width, "width")
+        self.valid_w_h(height, "height")
+        self.valid_x_y(x, "x")
+        self.valid_x_y(y, "y")
+
         self.__width = width
         self.__height = height
         self.__x = x
         self.__y = y
+
+    def valid_w_h(self, arg, str_arg):
+        if type(arg) is not int:
+            raise TypeError(f"{str_arg} must be an integer")
+        if arg <= 0:
+            raise ValueError(f"{str_arg} must be > 0")
+
+    def valid_x_y(self, arg, str_arg):
+        
+        if type(arg) is not int:
+            raise TypeError(f"{str_arg} must be an integer")
+        if arg < 0:
+            raise ValueError(f"{str_arg} must be >= 0")
+
+    def area(self):
+        """Multiply width and height"""
+        return self.width * self.height
+
+    def display(self):
+        """ Display the rectangle """
+        for i in range(self.height):
+            print("#" * self.width)
 
     @property
     def width(self):
@@ -21,6 +48,7 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, width):
+        self.valid_w_h(width, "width")
         self.__width = width
 
     @property
@@ -29,6 +57,7 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, height):
+        self.valid_w_h(height, "height")
         self.__height = height
 
     @property
@@ -37,6 +66,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, x):
+        self.valid_x_y(x, "x")
         self.__x = x
 
     @property
@@ -44,5 +74,9 @@ class Rectangle(Base):
         return self.__y
 
     @y.setter
-    def width(self, y):
+    def y(self, y):
+        self.valid_x_y(y, "y")
         self.__y = y
+
+    def __str__(self):
+        return f"[{self.__class__.__name__}] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
