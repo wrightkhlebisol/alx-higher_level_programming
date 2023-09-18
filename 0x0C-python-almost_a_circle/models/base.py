@@ -13,3 +13,10 @@ class Base():
             self.id = Base.__nb_objects
         else:
             self.id = id
+
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        if list_dictionaries is None:
+            return []
+        else:
+            return str(list_dictionaries)
