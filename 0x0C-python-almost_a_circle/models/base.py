@@ -41,3 +41,16 @@ class Base():
                 for list_obj in list_objs:
                     new_list.append(list_obj.to_dictionary())
                 file.write(cls.to_json_string(new_list))
+
+    @classmethod
+    def create(cls, **dictionary):
+        """Return instance with all attributes set"""
+        print(dictionary)
+        dummy_cls = cls(1,1,1,1)
+        dummy_cls.update(dictionary)
+        """
+        for k in dictionary.keys():
+            cls.update(k, dictionary.get(k))
+            print(k)
+        """
+        return dummy_cls
