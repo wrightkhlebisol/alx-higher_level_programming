@@ -32,7 +32,7 @@ class Base():
     @classmethod 
     def save_to_file(cls, list_objs):
         """Save json to file"""
-        file_name = list_objs[0].__class__.__name__ + ".json"
+        file_name = cls.__name__ + ".json"
         with open(file_name, 'w') as file:
             if list_objs is None:
                 file.write("")
@@ -45,12 +45,21 @@ class Base():
     @classmethod
     def create(cls, **dictionary):
         """Return instance with all attributes set"""
-        print(dictionary)
         dummy_cls = cls(1,1,1,1)
-        dummy_cls.update(dictionary)
+        dummy_cls.update(**dictionary)
         """
         for k in dictionary.keys():
             cls.update(k, dictionary.get(k))
             print(k)
         """
         return dummy_cls
+
+    @classmethod
+    def load_from_file(cls):
+        """Load from file"""
+        file_name = cls.__name__ + ".json"
+        with open(file_name, "r") as file:
+            json_str = file.read()
+            json_list = cls.from_json_string(json_str)
+            instances = [cls.create(**j) for j in json_list]
+            return instances
