@@ -73,6 +73,7 @@ class Rectangle(Base):
                     self.y = arg
 
     def to_dictionary(self):
+        """Self to dict"""
         return dict({
             'x': self.x,
             'y': self.y,

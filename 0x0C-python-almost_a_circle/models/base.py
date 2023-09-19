@@ -47,11 +47,6 @@ class Base():
         """Return instance with all attributes set"""
         dummy_cls = cls(1,1,1,1)
         dummy_cls.update(**dictionary)
-        """
-        for k in dictionary.keys():
-            cls.update(k, dictionary.get(k))
-            print(k)
-        """
         return dummy_cls
 
     @classmethod
@@ -61,5 +56,5 @@ class Base():
         with open(file_name, "r") as file:
             json_str = file.read()
             json_list = cls.from_json_string(json_str)
-            instances = [cls.create(**j) for j in json_list]
-            return instances
+            each_obj = [cls.create(**obj) for obj in json_list]
+            return each_obj
