@@ -33,6 +33,7 @@ class Square(Rectangle):
                     self.y = arg
     
     def to_dictionary(self):
+        """self to dict"""
         return dict({
             'x': self.x,
             'y': self.y,
