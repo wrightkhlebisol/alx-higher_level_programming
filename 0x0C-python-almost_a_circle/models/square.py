@@ -31,7 +31,7 @@ class Square(Rectangle):
                     self.x = arg
                 elif i == 3:
                     self.y = arg
-    
+
     def to_dictionary(self):
         """self to dict"""
         return dict({
