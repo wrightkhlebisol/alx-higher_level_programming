@@ -52,9 +52,12 @@ class Base():
     @classmethod
     def load_from_file(cls):
         """Load from file"""
-        file_name = cls.__name__ + ".json"
-        with open(file_name, "r") as file:
-            json_str = file.read()
-            json_list = cls.from_json_string(json_str)
-            each_obj = [cls.create(**obj) for obj in json_list]
-            return each_obj
+        try:
+            file_name = cls.__name__ + ".json"
+            with open(file_name, "r") as file:
+                json_str = file.read()
+                json_list = cls.from_json_string(json_str)
+                each_obj = [cls.create(**obj) for obj in json_list]
+                return each_obj
+        except FileNotFoundError:
+            return []
