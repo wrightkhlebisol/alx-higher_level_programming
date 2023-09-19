@@ -84,41 +84,50 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """ getter for width """
         return self.__width
 
     @width.setter
     def width(self, width):
+        """ setter for width """
         self.valid_w_h(width, "width")
         self.__width = width
 
     @property
     def height(self):
+        """ getter for height """
         return self.__height
 
     @height.setter
     def height(self, height):
+        """ setter for height """
         self.valid_w_h(height, "height")
         self.__height = height
 
     @property
     def x(self):
+        """ getter for x """
         return self.__x
 
     @x.setter
     def x(self, x):
+        """ setter for x """
         self.valid_x_y(x, "x")
         self.__x = x
 
     @property
     def y(self):
+        """ getter for y """
         return self.__y
 
     @y.setter
     def y(self, y):
+        """ setter for y """
         self.valid_x_y(y, "y")
         self.__y = y
 
     def __str__(self):
+        """ String represntation of object """
         class_name = self.__class__.__name__
         s_id = self.id
         s_x = self.x

@@ -43,14 +43,17 @@ class Square(Rectangle):
 
     @property
     def size(self):
+        """ getter for size """
         return self.width
 
     @size.setter
     def size(self, size):
+        """ setter for size """
         self.width = size
         self.height = size
 
     def __str__(self):
+        """ print string representation of string """
         class_name = self.__class__.__name__
         s_id = self.id
         s_x = self.x

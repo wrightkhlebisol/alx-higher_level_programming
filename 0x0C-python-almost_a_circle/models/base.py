@@ -17,6 +17,7 @@ class Base():
 
     @staticmethod
     def to_json_string(list_dictionaries):
+        """Class to json string """
         if list_dictionaries is None:
             return []
         else:
@@ -24,6 +25,7 @@ class Base():
 
     @staticmethod
     def from_json_string(json_string):
+        """ Object from json string """
         if json_string is None:
             return []
         else:
