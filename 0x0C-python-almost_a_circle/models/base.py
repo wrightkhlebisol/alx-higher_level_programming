@@ -37,7 +37,7 @@ class Base():
         file_name = cls.__name__ + ".json"
         with open(file_name, 'w') as file:
             if list_objs is None:
-                file.write()
+                return
             else:
                 new_list = list()
                 for list_obj in list_objs:
@@ -70,7 +70,7 @@ class Base():
         file_name = cls.__name__ + ".csv"
         with open(file_name, 'w') as file:
             if list_objs is None:
-                file.write()
+                return
             else:
                 new_str = ""
                 for list_obj in list_objs:
