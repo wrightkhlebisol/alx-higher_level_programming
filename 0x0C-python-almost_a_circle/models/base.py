@@ -31,7 +31,7 @@ class Base():
         else:
             return json.loads(json_string)
 
-    @classmethod 
+    @classmethod
     def save_to_file(cls, list_objs):
         """Save json to file"""
         file_name = cls.__name__ + ".json"
