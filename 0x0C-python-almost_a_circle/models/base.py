@@ -72,11 +72,11 @@ class Base():
             if list_objs is None:
                 file.write("")
             else:
-                new_list = list()
+                new_str = ""
                 for list_obj in list_objs:
-                    new_list.append(list_obj.to_dictionary())
+                    new_str.append(list_obj.to_dictionary())
                 file.write(cls.to_json_string(new_list))
-        
+
     @classmethod
     def load_from_file_csv(cls):
         """Load from a CSV file"""
