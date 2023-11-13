@@ -74,9 +74,9 @@ class Rectangle:
         else:
             return rect_1
 
-    @staticmethod
+    @classmethod
     def square(cls, size=0):
-        return Rectangle(cls, cls)
+        return Rectangle(size, size)
 
     def __str__(self):
         """Print string representation of rectangle"""
