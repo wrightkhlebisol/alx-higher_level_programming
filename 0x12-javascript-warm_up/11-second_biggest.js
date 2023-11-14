@@ -7,8 +7,8 @@ if (!pArgs[2]) {
   console.log(0);
 } else {
   let i = 2;
-  let firstHighest = 0;
-  let secondHighest = 0;
+  let firstHighest = parseInt(pArgs[2]);
+  let secondHighest = parseInt(pArgs[2]);
 
   while (i < pArgs.length) {
     const currArg = parseInt(pArgs[i]);
