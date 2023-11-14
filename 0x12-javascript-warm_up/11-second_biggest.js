@@ -11,7 +11,7 @@ if (!pArgs[2]) {
   let secondHighest = 0;
 
   while (i < pArgs.length) {
-    let currArg = parseInt(pArgs[i]);
+    const currArg = parseInt(pArgs[i]);
     if (currArg > firstHighest && currArg > secondHighest) {
       secondHighest = firstHighest;
       firstHighest = currArg;
