@@ -11,11 +11,12 @@ if (!pArgs[2]) {
   let secondHighest = 0;
 
   while (i < pArgs.length) {
-    if (pArgs[i] > firstHighest && pArgs[i] > secondHighest) {
+    let currArg = parseInt(pArgs[i]);
+    if (currArg > firstHighest && currArg > secondHighest) {
       secondHighest = firstHighest;
-      firstHighest = pArgs[i];
-    } else if (pArgs[i] > secondHighest && pArgs[i] < firstHighest) {
-      secondHighest = pArgs[i];
+      firstHighest = currArg;
+    } else if (currArg > secondHighest && currArg < firstHighest) {
+      secondHighest = currArg;
     }
     i++;
   }
