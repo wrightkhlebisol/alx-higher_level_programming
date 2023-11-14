@@ -4,7 +4,8 @@ const numP = parseInt(process.argv[2]);
 if (!numP) {
   console.log('Missing size');
 } else {
-  let i = j = 0;
+  let i = 0;
+  let j = 0;
   let lineFeed = '';
   while (i < numP) {
     while (j < numP) {
