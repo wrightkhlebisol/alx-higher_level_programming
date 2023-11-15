@@ -31,6 +31,11 @@ class Base():
         else:
             return json.loads(json_string)
 
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        pass
+
+
     @classmethod
     def save_to_file(cls, list_objs):
         """Save json to file"""

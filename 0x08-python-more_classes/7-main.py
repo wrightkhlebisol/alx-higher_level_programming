@@ -24,4 +24,8 @@ my_rectangle_3.print_symbol = ["C", "is", "fun!"]
 print(my_rectangle_3)
 
 print("--")
+my_rectangle_3.print_symbol = 89
+print(my_rectangle_3)
+
+print("--")
 
