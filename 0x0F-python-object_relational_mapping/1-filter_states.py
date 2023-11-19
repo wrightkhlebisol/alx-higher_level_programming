@@ -13,7 +13,9 @@ if __name__ == '__main__':
     if len(args) >= 4:
         db = MySQLdb.connect(host, args[1], args[2], args[3])
         cur = db.cursor()
-        res = cur.execute("SELECT * FROM states WHERE name LIKE 'N%'")
+        query = 'SELECT * FROM states WHERE name \
+        LIKE "N%" ORDER BY `id` ASC'
+        res = cur.execute(query)
         rows = cur.fetchall()
         for row in rows:
             print(row)
