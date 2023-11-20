@@ -17,7 +17,6 @@ if __name__ == '__main__':
             password=args[2],
             database=args[3]
         )
-        print("Arg 4", args[4])
         """ Create a cursor """
         cur = db.cursor()
         query = "SELECT * FROM states WHERE name = '{}' \
