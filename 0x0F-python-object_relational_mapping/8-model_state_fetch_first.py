@@ -22,3 +22,5 @@ if __name__ == '__main__':
 
         if res:
             print(f'{res.id}: {res.name}')
+        else:
+            print('Nothing')
