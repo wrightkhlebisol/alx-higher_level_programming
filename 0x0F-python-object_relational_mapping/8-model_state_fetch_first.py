@@ -18,4 +18,6 @@ if __name__ == '__main__':
         session = Session(engine)
 
         res = session.query(State).first()
-        print(f'{res.id}: {res.name}')
+
+        if res:
+            print(f'{res.id}: {res.name}')
