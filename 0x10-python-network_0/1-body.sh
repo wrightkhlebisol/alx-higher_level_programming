@@ -1,3 +1,3 @@
 #!/bin/bash
 # Use GET for given URL
-curl -s -X GET "$1"
+curl -sL -X GET "$1"
