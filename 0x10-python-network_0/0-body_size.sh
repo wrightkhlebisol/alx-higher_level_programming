@@ -1,3 +1,3 @@
 #!/bin/bash
 # Curl body size
-curl -s -w '%{size_download}\n' "$1" | tail -n 1
+curl -s -w '\n%{size_download}\n' "$1" | tail -n 1
