@@ -1,4 +1,9 @@
+""" Find peak in an integer """
+
+
 def find_peak(list_of_integers):
+    """ Takes list of integers and find the highest """
+
     if len(list_of_integers) == 0:
         return None
 
