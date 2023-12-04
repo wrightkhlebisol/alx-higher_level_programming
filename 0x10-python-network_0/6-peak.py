@@ -4,7 +4,7 @@
 
 def find_peak(list_of_integers):
     """ Takes list of integers and find the highest """
-
+    """
     if len(list_of_integers) == 0:
         return None
 
@@ -23,6 +23,7 @@ def find_peak(list_of_integers):
 
     return list_of_integers[max_index]
     """
+
     if not list_of_integers:
         return None
 
@@ -38,4 +39,3 @@ def find_peak(list_of_integers):
             low = mid + 1
 
     return list_of_integers[low]
-    """
