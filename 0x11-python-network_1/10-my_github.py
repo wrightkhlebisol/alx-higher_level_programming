@@ -7,9 +7,9 @@ if __name__ == '__main__':
     import requests
     username = sys.argv[1]
     pa_token = sys.argv[2]
-    gith_url = f"https://api.github.com/users/{username}"
+    gith_url = f"https://api.github.com/user"
     headers = {
-        'Authorization': pa_token,
+        'Authorization': f"Bearer {pa_token}",
         "Accept": "application/vnd.github+json"
     }
     res = requests.get(gith_url, headers=headers)
@@ -21,4 +21,4 @@ if __name__ == '__main__':
         else:
             print(None)
     except Exception as e:
-        print(e)
+        print(None)
