@@ -19,5 +19,5 @@ if __name__ == '__main__':
             print(f"[{j_res.get('id')}] {j_res.get('name')}")
         elif len(j_res) <= 0:
             print("No result")
-    except requests.exceptions.JSONDecodeError as e:
+    except requests.JSONDecodeError as e:
         print("Not a valid JSON")
