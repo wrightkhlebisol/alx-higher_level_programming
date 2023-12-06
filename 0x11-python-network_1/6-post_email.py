@@ -9,5 +9,5 @@ if __name__ == '__name__':
     url = sys.argv[1]
     email = sys.argv[2]
     data = {'email': email}
-    res = requests.post(url, data)
+    res = requests.post(url, data=data)
     print(res)
