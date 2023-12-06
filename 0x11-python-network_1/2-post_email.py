@@ -7,5 +7,5 @@ if __name__ == '__main__':
     body = {
         'email': sys.argv[2]
     }
-    with urllib.request.urlopen(url, body) as response:
+    with urllib.request.urlopen(url, urllib.parse.urlencode(body).encode('utf-8')) as response:
         print(response.read().decode('utf-8'))
