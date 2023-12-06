@@ -5,7 +5,6 @@
 """
 if __name__ == '__main__':
     import requests
-    import requests.exceptions
     import sys
     url = 'http://0.0.0.0:5000/search_user'
     if len(sys.argv) > 1:
@@ -20,5 +19,6 @@ if __name__ == '__main__':
             print(f"[{j_res.get('id')}] {j_res.get('name')}")
         elif len(j_res) <= 0:
             print("No result")
-    except requests.exceptions.JSONDecodeError as e:
+    except JSONDecodeError as e:
+        print(requets.exceptions)
         print("Not a valid JSON")
