@@ -13,10 +13,11 @@ if __name__ == '__main__':
         q = ''
     body = {'q': q}
     res = requests.post(url, data=body)
-    j_res = res.json()
-    if j_res:
-        print(f"[{j_res.get('id')}] {j_res.get('name')}")
-    elif len(j_res) <= 0:
-        print("No result")
-    else:
+    try:
+        j_res = res.json()
+        if j_res:
+            print(f"[{j_res.get('id')}] {j_res.get('name')}")
+        elif len(j_res) <= 0:
+            print("No result")
+    except Exception as e:
         print("Not a valid JSON")
