@@ -8,12 +8,13 @@ let count = 0;
 
 request(url, (err, res, body) => {
   if (err) {
-    return console.error(err);
+    console.error(err);
+  }else{
+    JSON.parse(body).results.forEach(result => {
+      if (result.characters.includes(testStr)) {
+        count++;
+      }
+    });
+    console.log(count);
   }
-  JSON.parse(body).results.forEach(result => {
-    if (result.characters.includes(testStr)) {
-      count++;
-    }
-  });
-  console.log(count);
 });
