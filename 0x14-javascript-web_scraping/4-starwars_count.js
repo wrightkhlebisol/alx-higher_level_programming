@@ -9,7 +9,7 @@ let count = 0;
 request(url, (err, res, body) => {
   if (err) {
     console.error(err);
-  }else{
+  } else {
     JSON.parse(body).results.forEach(result => {
       if (result.characters.includes(testStr)) {
         count++;
